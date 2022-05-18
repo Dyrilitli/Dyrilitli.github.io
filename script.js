@@ -1,16 +1,12 @@
 
 // variables ---------------------------------------------------
 
-var url = "https://thordisbk.github.io/data.json";
+var url = "https://dyrilitli.github.io/data.json";
 var activeFilters = [];
 
-const filterNames = {
-    "all": "Show all",
+const filterNames = {}
+/*    "all": "Show all",
     "haslink": "Has Link",
-    "cplusplus": "C++",
-    "csharp": "C#",
-    "javascript": "JavaScript",
-    "opengl": "OpenGL",
     "unity3d": "Unity",
     "unreal": "Unreal",
     "godot": "Godot",
@@ -22,10 +18,8 @@ const filterNames = {
     "gamejam": "Game Jam",
     "groupproject": "Group",
     "individualproject": "Individual",
-    "university": "University",
-    "physics": "Physics",
-    "splines": "Splines"
-}
+    "university": "University"
+}*/
 
 //  ---------------------------------------------------
 
