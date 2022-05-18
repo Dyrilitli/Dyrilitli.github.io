@@ -1,0 +1,202 @@
+:root {
+  --dark-color: #35363a;
+  --light-color: #f5f6f3;
+  --green-color: #6ba28c;
+  --pink-color: #bf9aca;
+  --blue-color: #4b88a2;
+
+  --gridbox-size: 300px;
+  --gridbox-size-half: 150px;
+}
+
+body {
+  background-color: var(--dark-color);
+  font-family: Georgia;
+
+  padding: 0px;
+  margin: auto;
+  text-align: center;
+
+  color: #6ba28c;
+}
+
+/* projects grid */
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, var(--gridbox-size));
+  grid-gap: 10px;
+  padding: 0px 5px 0px 5px; /* top right bottom left */
+}
+
+.grid-item {
+  padding: 0px;
+  height: var(--gridbox-size);
+  width: var(--gridbox-size);
+
+  position: relative;
+  text-align: center;
+}
+
+.grid-item img,
+.grid-item .project-info {
+  border-radius: 3px;
+}
+
+.project-images {
+  width: var(--gridbox-size);
+  height: var(--gridbox-size);
+  float: left;
+}
+
+/* links */
+
+a:link {
+  text-decoration: none;
+}
+
+p a {
+  color: var(--blue-color);
+}
+
+.main-links a:link {
+  color: var(--blue-color);
+}
+
+.project-links a:link {
+  color: var(--dark-color);
+}
+
+.main-links a:visited {
+  color: var(--blue-color);
+}
+
+.project-links a:visited {
+  color: var(--dark-color);
+}
+
+.main-links a:hover {
+  color: var(--pink-color);
+}
+
+.project-links a:hover {
+  color: var(--pink-color);
+}
+
+/* project-info texts */
+
+.project-info {
+  position: absolute;
+  bottom: 0px;
+
+  height: var(--gridbox-size);
+  width: calc(var(--gridbox-size) - 30px);
+  padding: 0px 15px 0px 15px;
+
+  display: none;
+  color: black;
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+  background-color: rgba(245, 246, 243, 0.75);
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  /* @media (max-width: 800px)*/
+  /* CSS that should be displayed on mobile */
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, calc(var(--gridbox-size) * 2));
+  }
+
+  .grid-item {
+    width: calc(var(--gridbox-size) * 2);
+  }
+
+  .project-images {
+    float: left;
+  }
+
+  .project-info {
+    display: block;
+    margin-left: var(--gridbox-size);
+  }
+}
+
+.project-info p {
+  font-size: 16px;
+}
+
+.project-info .date-info {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.project-links {
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px; /* needs a specific value to work */
+  margin-bottom: 15px; /* height of links above bottom */
+}
+
+/* show project text while hovering over the image */
+img:hover + .project-info {
+  display: block;
+}
+
+/* show project text while hovering over itself */
+.project-info:hover {
+  display: block;
+}
+
+/* for the filter buttons */
+
+#filter-buttons {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, 75px);
+  grid-gap: 1px;
+  padding: 15px 0px 25px 0px; /* top right bottom left */
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: var(--light-color);
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 5px 0px;
+  width: 75px;
+  font-family: Georgia;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: var(--green-color);
+  color: var(--light-color);
+}
+
+/* for filtering; showing/hiding divs */
+
+.filter-div {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  overflow: hidden;
+}

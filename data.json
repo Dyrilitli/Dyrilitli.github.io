@@ -1,0 +1,20 @@
+{
+    "projects": [
+      {
+        "title": "My world map",
+        "description": "This is a world map I created for myself and my Dungeons & Dragons games.",
+        "date": "",
+        "imagepath": "images/testpic.png",
+        "links": [],
+        "classes": []
+      },
+	{
+        "title": "Dragon",
+        "description": "I drew this on paper.",
+        "date": "",
+        "imagepath": "images/testpic.png",
+        "links": [],
+        "classes": []
+      }
+    ]
+}
