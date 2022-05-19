@@ -13,7 +13,7 @@
 
 body {
   background-color: var(--background-color);
-  font-family: Georgia;
+  font-family: Montserrat;
 
   padding: 0px;
   margin: auto;
@@ -139,38 +139,10 @@ img:hover + .project-info {
   display: block;
 }
 
-/* for the filter buttons */
-
-.btn {
-  border: none;
-  outline: none;
-  background-color: var(--light-color);
-  cursor: pointer;
-  border-radius: 7px;
-  padding: 5px 0px;
-  width: 75px;
-  font-family: Georgia;
+.project-info p {
+  font-weight: bold;
 }
 
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: var(--green-color);
-  color: var(--light-color);
-}
-
-/* for filtering; showing/hiding divs */
-
-.filter-div {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-.container {
-  overflow: hidden;
+.project-info h2 {
+  font-weight: bolder;
 }
