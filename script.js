@@ -2,24 +2,6 @@
 // variables ---------------------------------------------------
 
 var url = "https://dyrilitli.github.io/data.json";
-var activeFilters = [];
-
-const filterNames = {}
-/*    "all": "Show all",
-    "haslink": "Has Link",
-    "unity3d": "Unity",
-    "unreal": "Unreal",
-    "godot": "Godot",
-    "twod": "2D",
-    "threed": "3D",
-    "pcg": "PCG",
-    "ai": "AI",
-    "multiplayer": "Multiplayer",
-    "gamejam": "Game Jam",
-    "groupproject": "Group",
-    "individualproject": "Individual",
-    "university": "University"
-}*/
 
 //  ---------------------------------------------------
 
@@ -27,8 +9,6 @@ fetch(url)
 .then(res => res.json())
 .then(json => {
     createProjectsFromJSON(json);
-    createAllButtons(json);
-    filterSelection();
 })
 
 // create projects ---------------------------------------------------
@@ -38,6 +18,7 @@ function createProjectsFromJSON(data) {
 
     var projectDiv = document.getElementById("projects-grid");
 
+    var id = 1;
     data.projects.forEach(projectInfo => {
         // console.log(projectInfo);
         var title = projectInfo.title;
@@ -47,11 +28,12 @@ function createProjectsFromJSON(data) {
         var links = projectInfo.links;
         var classes = projectInfo.classes;
 
-        projectDiv.appendChild(createProjectDiv(title, description, date, imagepath, links, classes));
+        projectDiv.appendChild(createProjectDiv(title, description, date, imagepath, links, classes, id));
+        id += 1;
     });
 }
 
-function createProjectDiv(title, description, date, imagepath, links, classes) {
+function createProjectDiv(title, description, date, imagepath, links, classes, imageId) {
 
     console.assert(typeof title === 'string' && title != "", 'title is not a string or is empty');
     console.assert(typeof description === 'string', 'description is not a string');
@@ -81,6 +63,8 @@ function createProjectDiv(title, description, date, imagepath, links, classes) {
     if (imagepath.length > 0) imgName = imagepath.split("/")[1].split(".")[0];
     img.setAttribute("src", imagepath);
     img.setAttribute("alt", imgName);
+    img.id = imageId;
+    img.setAttribute("onclick", "showBigImage(this)");
     img.classList.add("project-images");
     if (links.length > 0) linkElem.appendChild(img);
     else project.appendChild(img);
@@ -114,103 +98,32 @@ function createProjectDiv(title, description, date, imagepath, links, classes) {
     return project;
 }
 
-// create buttons ---------------------------------------------------
+// resize image ---------------------------------------------------
 
-function createAllButtons(data) {
-    // create all button and has link button
-    // find classes used in json data and create filter buttons buttons
-    
-    var buttonList = [];
-    var buttonsDiv = document.getElementById("filter-buttons");
-    var listOfClassesCreated = [];
+function showBigImage(elem) {
 
-    buttonList.push(createButton("all", true));
-    buttonList.push(createButton("haslink", false));
-    listOfClassesCreated.push("all");
-    listOfClassesCreated.push("haslink");
+    console.log("resize image:", elem.id);
 
-    data.projects.forEach(projectInfo => {
-        // console.log(projectInfo);
-        projectInfo.classes.forEach(className => {
-            if (className !== "grid-item" && className !== "filter-div" && className !== "show" && filterNames[className] && listOfClassesCreated.indexOf(className) < 0) {
-                buttonList.push(createButton(className, false));
-                listOfClassesCreated.push(className);
-            }
-        }); 
-    });
+    var docString = `<!DOCTYPE html>
+    <html>
+    
+      <head>
+        <title>WHAT Kristjón's portfolio</title>
+      </head>
+      
+      <body>
+        <!--Page contains full image-->
+        <img id="one-image" width="" height="" src="${elem.getAttribute("src")}"/>
+    
+        <!-- <p>This page is a work in progress.</p> -->
+      </body>
+    
+      <footer>
+      </footer>
+    
+    </html>
+    `
 
-    // add event listener
-    buttonList.forEach(button => {
-        buttonsDiv.appendChild(button);
-        button.addEventListener("click", function() {
-            // console.log("[BEF] activeFilters: ", activeFilters);
-            // var currentlyActive = document.getElementsByClassName("active");
-            var allButton = document.getElementById("all-button");
-    
-            // check if this button was active or not
-            if (this.className.indexOf(" active") > -1) {
-                this.classList.remove("active");
-                // remove this.className from activeFilters
-                var filterValue = this.id.split("-")[0];
-                activeFilters = activeFilters.filter(function(value, index, arr) {return value != filterValue});
-            } else {
-                this.classList.add("active");
-                // add this.className to activeFilters
-                var filterValue = this.id.split("-")[0];
-                activeFilters.push(filterValue);
-            }
-    
-            if (this.id == "all-button") {
-                // if all-button is clicked, deactivate all other buttons
-                for (var j = 0; j < buttonList.length; j++) {
-                    buttonList[j].classList.remove("active");
-                }
-                activeFilters = [];
-            } else {
-                // if any other button is clicked, deactive the all-button
-                allButton.classList.remove("active");
-            }
-    
-            // activate "all-button" if no other button is active
-            if (document.getElementsByClassName("active").length == 0) {
-                allButton.classList.add("active");
-                activeFilters = [];
-            }
-            // console.log("[AFT] activeFilters: ", activeFilters);
-            filterSelection();
-        });
-    });
-}
-
-function createButton(name, active) {
-    
-    var button = document.createElement("button");
-    button.classList.add("btn");
-    if (active === true) button.classList.add("active");
-    button.setAttribute("id", name + "-button");
-    button.setAttribute("onclick", "filterSelection()");
-    
-    var buttonText = document.createTextNode(filterNames[name]);
-    button.appendChild(buttonText);
-    
-    return button;
-}
-
-// filtering of projects ---------------------------------------------------
-
-function filterSelection() {
-    var projects = document.getElementsByClassName("filter-div");
-    for (var i = 0; i < projects.length; i++) {
-        var hasAllFilters = true;
-        for (var j = 0; j < activeFilters.length; j++) {
-            if (projects[i].className.indexOf(activeFilters[j]) == -1) {
-                hasAllFilters = false;
-            }
-        }
-        if (hasAllFilters === true) {
-            projects[i].classList.add("show");
-        } else {
-            projects[i].classList.remove("show");
-        }
-    }
+    var newWindow = window.open("image.html");
+    newWindow.document.write(docString);
 }

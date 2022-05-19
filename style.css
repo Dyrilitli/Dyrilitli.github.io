@@ -1,5 +1,5 @@
 :root {
-  --dark-color: #35363a;
+  --background-color: #594578;
   --light-color: #f5f6f3;
   --green-color: #6ba28c;
   --pink-color: #bf9aca;
@@ -7,10 +7,12 @@
 
   --gridbox-size: 300px;
   --gridbox-size-half: 150px;
+  --grid-gap: 10px;
+  /*image is 300px, text box is 600px, total is 900px+5px*/
 }
 
 body {
-  background-color: var(--dark-color);
+  background-color: var(--background-color);
   font-family: Georgia;
 
   padding: 0px;
@@ -26,15 +28,16 @@ body {
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: repeat(auto-fit, var(--gridbox-size));
-  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-gap: var(--grid-gap);
   padding: 0px 5px 0px 5px; /* top right bottom left */
 }
 
 .grid-item {
   padding: 0px;
   height: var(--gridbox-size);
-  width: var(--gridbox-size);
+  width: calc(var(--gridbox-size) * 3 + var(--grid-gap));
+  justify-self: center;
 
   position: relative;
   text-align: center;
@@ -48,7 +51,21 @@ body {
 .project-images {
   width: var(--gridbox-size);
   height: var(--gridbox-size);
+  
   float: left;
+  padding: 0px 0px 0px 0px;
+}
+
+.project-info {
+  height: var(--gridbox-size);
+  width: calc(var(--gridbox-size) * 2);
+
+  float: right;
+  padding: 0px 0px 0px 0px;
+
+  color: black;
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+  background-color: rgba(245, 246, 243, 0.75);
 }
 
 /* links */
@@ -66,7 +83,7 @@ p a {
 }
 
 .project-links a:link {
-  color: var(--dark-color);
+  color: var(--background-color);
 }
 
 .main-links a:visited {
@@ -74,7 +91,7 @@ p a {
 }
 
 .project-links a:visited {
-  color: var(--dark-color);
+  color: var(--background-color);
 }
 
 .main-links a:hover {
@@ -86,42 +103,6 @@ p a {
 }
 
 /* project-info texts */
-
-.project-info {
-  position: absolute;
-  bottom: 0px;
-
-  height: var(--gridbox-size);
-  width: calc(var(--gridbox-size) - 30px);
-  padding: 0px 15px 0px 15px;
-
-  display: none;
-  color: black;
-  text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
-  background-color: rgba(245, 246, 243, 0.75);
-}
-
-@media only screen and (hover: none) and (pointer: coarse) {
-  /* @media (max-width: 800px)*/
-  /* CSS that should be displayed on mobile */
-
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, calc(var(--gridbox-size) * 2));
-  }
-
-  .grid-item {
-    width: calc(var(--gridbox-size) * 2);
-  }
-
-  .project-images {
-    float: left;
-  }
-
-  .project-info {
-    display: block;
-    margin-left: var(--gridbox-size);
-  }
-}
 
 .project-info p {
   font-size: 16px;
@@ -155,17 +136,6 @@ img:hover + .project-info {
 }
 
 /* for the filter buttons */
-
-#filter-buttons {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  grid-template-columns: repeat(auto-fit, 75px);
-  grid-gap: 1px;
-  padding: 15px 0px 25px 0px; /* top right bottom left */
-  margin-left: 25%;
-  margin-right: 25%;
-}
 
 .btn {
   border: none;
