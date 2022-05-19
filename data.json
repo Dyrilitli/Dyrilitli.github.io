@@ -15,6 +15,14 @@
         "imagepath": "images/testpic.png",
         "links": [],
         "classes": []
+      },
+	    {
+        "title": "Dragonhead",
+        "description": "I drew this on a pen display.",
+        "date": "",
+        "imagepath": "images/dragonhead.png",
+        "links": [],
+        "classes": []
       }
     ]
 }
