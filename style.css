@@ -56,6 +56,10 @@ body {
   padding: 0px 0px 0px 0px;
 }
 
+.project-images:hover {
+  cursor: pointer;
+}
+
 .project-info {
   height: var(--gridbox-size);
   width: calc(var(--gridbox-size) * 2);

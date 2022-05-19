@@ -18,7 +18,6 @@ function createProjectsFromJSON(data) {
 
     var projectDiv = document.getElementById("projects-grid");
 
-    var id = 1;
     data.projects.forEach(projectInfo => {
         // console.log(projectInfo);
         var title = projectInfo.title;
@@ -28,12 +27,11 @@ function createProjectsFromJSON(data) {
         var links = projectInfo.links;
         var classes = projectInfo.classes;
 
-        projectDiv.appendChild(createProjectDiv(title, description, date, imagepath, links, classes, id));
-        id += 1;
+        projectDiv.appendChild(createProjectDiv(title, description, date, imagepath, links, classes));
     });
 }
 
-function createProjectDiv(title, description, date, imagepath, links, classes, imageId) {
+function createProjectDiv(title, description, date, imagepath, links, classes) {
 
     console.assert(typeof title === 'string' && title != "", 'title is not a string or is empty');
     console.assert(typeof description === 'string', 'description is not a string');
@@ -55,7 +53,6 @@ function createProjectDiv(title, description, date, imagepath, links, classes, i
     if (links.length > 0) {
         linkElem = document.createElement("a");
         linkElem.setAttribute("href", links[0]);
-        // TODO rest of links
     }
 
     var img = document.createElement("img");
@@ -63,7 +60,6 @@ function createProjectDiv(title, description, date, imagepath, links, classes, i
     if (imagepath.length > 0) imgName = imagepath.split("/")[1].split(".")[0];
     img.setAttribute("src", imagepath);
     img.setAttribute("alt", imgName);
-    img.id = imageId;
     img.setAttribute("onclick", "showBigImage(this)");
     img.classList.add("project-images");
     if (links.length > 0) linkElem.appendChild(img);
@@ -98,11 +94,13 @@ function createProjectDiv(title, description, date, imagepath, links, classes, i
     return project;
 }
 
-// resize image ---------------------------------------------------
+// image ---------------------------------------------------
 
 function showBigImage(elem) {
 
-    console.log("resize image:", elem.id);
+    var img_src = elem.getAttribute("src");
+    var img_path = img_src.replace("_thumbnail", "");
+    console.log("Image src: {0}. Get image at path: {1}.".format(img_src, img_path));
 
     var docString = `<!DOCTYPE html>
     <html>
@@ -113,7 +111,7 @@ function showBigImage(elem) {
       
       <body>
         <!--Page contains full image-->
-        <img id="one-image" width="" height="" src="${elem.getAttribute("src")}"/>
+        <img id="one-image" width="" height="" src="${img_path}"/>
     
         <!-- <p>This page is a work in progress.</p> -->
       </body>
