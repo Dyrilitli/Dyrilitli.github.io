@@ -19,7 +19,7 @@ body {
   margin: auto;
   text-align: center;
 
-  color: #6ba28c;
+  color: var(--green-color);
 }
 
 /* projects grid */
