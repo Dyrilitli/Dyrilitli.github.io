@@ -108,7 +108,7 @@ function showBigImage(elem) {
     <html>
     
       <head>
-        <title>WHAT Kristjón's portfolio</title>
+        <title>Kristjón's portfolio</title>
       </head>
       
       <body>
