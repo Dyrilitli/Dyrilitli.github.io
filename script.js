@@ -100,7 +100,7 @@ function showBigImage(elem) {
 
     var img_src = elem.getAttribute("src");
     var img_path = img_src.replace("_thumbnail", "");
-    console.log("Image src: {0}. Get image at path: {1}.".format(img_src, img_path));
+    console.log(`Image src: ${img_src}. Get image at path: ${img_path}.`);
 
     var docString = `<!DOCTYPE html>
     <html>
