@@ -2,7 +2,7 @@
     "projects": [
       {
         "title": "My world map",
-        "description": "This is a world map I created for myself and my Dungeons & Dragons games.",
+        "description": "This is a world map I created for myself and my Dungeons & Dragons games. It was first hand-drawn on A3 paper and then scanned and worked on in Adobe Photoshop. Every place has history and a story to tell, a lot of unique encounters and interesting things to see.",
         "date": "",
         "imagepath": "images/Heimurmodir_thumbnail.png",
         "links": [],
@@ -10,7 +10,7 @@
       },
 	{
         "title": "Dragon",
-        "description": "I drew this on paper.",
+        "description": "An elegant beast/dragon I drew on paper. One of three prime dieties in my world which can be seen above.",
         "date": "",
         "imagepath": "images/greendragon_thumbnail.png",
         "links": [],
@@ -18,9 +18,17 @@
       },
 	    {
         "title": "Dragonhead",
-        "description": "I drew this on a pen display.",
+        "description": "This was a random sketch I drew on a pen display.",
         "date": "",
         "imagepath": "images/dragonhead.png",
+        "links": [],
+        "classes": []
+      },
+	    {
+        "title": "Dragonhead",
+        "description": "This was a random sketch I drew on a pen display.",
+        "date": "",
+        "imagepath": "images/.png",
         "links": [],
         "classes": []
       }
