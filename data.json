@@ -25,10 +25,18 @@
         "classes": []
       },
 	    {
-        "title": "Dragonhead",
-        "description": "This was a random sketch I drew on a pen display.",
+        "title": "Baby dragon",
+        "description": "A baby dragon I drew with pens on paper.",
         "date": "",
-        "imagepath": "images/.png",
+        "imagepath": "images/babydragon.jpg",
+        "links": [],
+        "classes": []
+      },
+	    {
+        "title": "Birdbrute",
+        "description": "A species I use for my world Riding beasts and used for heavy labour.The Birdbrutes are strong and pack a hard punch with their claws.",
+        "date": "",
+        "imagepath": "images/birdbrute.jpg",
         "links": [],
         "classes": []
       }
