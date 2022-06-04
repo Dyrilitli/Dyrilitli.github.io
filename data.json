@@ -2,7 +2,7 @@
     "projects": [
       {
         "title": "My world map",
-        "description": "This is a world map I created for myself and my Dungeons & Dragons games. It was first hand-drawn on A3 paper and then scanned and worked on in Adobe Photoshop. Every place has history and a story to tell, a lot of unique encounters and interesting things to see.",
+        "description": "This is a world map I created for myself and my Dungeons & Dragons games. It was first hand-drawn on A3 paper and then scanned and worked on digitally. Every place has history and a story to tell, a lot of unique encounters and interesting things to see.",
         "date": "",
         "imagepath": "images/Heimurmodir_thumbnail.png",
         "links": [],
@@ -34,7 +34,7 @@
       },
 	    {
         "title": "Birdbrute",
-        "description": "A species I use for my world Riding beasts and used for heavy labour.The Birdbrutes are strong and pack a hard punch with their claws.",
+        "description": "A species I use for my world. They are riding beasts and used for heavy labour. The Birdbrutes are strong and pack a hard punch with their claws.",
         "date": "",
         "imagepath": "images/birdbrute_thumbnail.jpg",
         "links": [],
@@ -66,7 +66,7 @@
       },
 	    {
         "title": "A new species",
-        "description": "A concept I created some years back of some kind og animal or alien/fantasy creature.",
+        "description": "A concept I created some years back of some kind of animal or alien/fantasy creature.",
         "date": "",
         "imagepath": "images/aspecies.jpg",
         "links": [],
