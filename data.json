@@ -55,6 +55,22 @@
         "imagepath": "images/djofla_thumbnail.png",
         "links": [],
         "classes": []
-      }	    
+      },
+	    {
+        "title": "Chibi style",
+        "description": "An experiment with the chibi style and trying out some new fun ways to work in a digital medium.",
+        "date": "",
+        "imagepath": "images/chibikjtoto.png",
+        "links": [],
+        "classes": []
+      },
+	    {
+        "title": "A new species",
+        "description": "A concept I created some years back of some kind og animal or alien/fantasy creature.",
+        "date": "",
+        "imagepath": "images/aspecies.jpg",
+        "links": [],
+        "classes": []
+      }
     ]
 }
