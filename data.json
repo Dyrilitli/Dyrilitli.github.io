@@ -36,7 +36,7 @@
         "title": "Birdbrute",
         "description": "A species I use for my world Riding beasts and used for heavy labour.The Birdbrutes are strong and pack a hard punch with their claws.",
         "date": "",
-        "imagepath": "images/birdbrute.jpg",
+        "imagepath": "images/birdbrute_thumbnail.jpg",
         "links": [],
         "classes": []
       },
@@ -44,7 +44,7 @@
         "title": "Aurum Argentum",
         "description": "A city in my world called Aurum Argentum, where most live a fairly prosperous life. Drawn on paper with pens and colored pencils.",
         "date": "",
-        "imagepath": "images/aurum.png",
+        "imagepath": "images/aurum_thumbnail.png",
         "links": [],
         "classes": []
       },
@@ -52,7 +52,7 @@
         "title": "Devilgirl",
         "description": "This was my first real attempt at drawing a humanoid figure on a pen display.",
         "date": "",
-        "imagepath": "images/djofla.png",
+        "imagepath": "images/djofla_thumbnail.png",
         "links": [],
         "classes": []
       }	    
