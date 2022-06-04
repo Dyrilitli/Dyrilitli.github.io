@@ -71,6 +71,14 @@
         "imagepath": "images/aspecies.jpg",
         "links": [],
         "classes": []
+      },
+	    {
+        "title": "Ink dragon",
+        "description": "A dragon I drew originally as a tattoo idea.",
+        "date": "",
+        "imagepath": "images/tattoodrg_thumbnail.jpg",
+        "links": [],
+        "classes": []
       }
     ]
 }
