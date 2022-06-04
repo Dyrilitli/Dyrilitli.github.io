@@ -17,26 +17,18 @@
         "classes": []
       },
 	    {
+        "title": "Dragonhead",
+        "description": "This was a random sketch I drew on a pen display.",
+        "date": "",
+        "imagepath": "images/dragonhead.png",
+        "links": [],
+        "classes": []
+      },
+	    {
         "title": "Baby dragon",
         "description": "A baby dragon I drew with pens on paper.",
         "date": "",
         "imagepath": "images/babydragon.jpg",
-        "links": [],
-        "classes": []
-     },
-	    {
-        "title": "City of Aurum Argentum",
-        "description": "A city in my world called Aurum Argentum, where most live a fairly prosperous life. Drawn on paper with pens and colored pencils.",
-        "date": "",
-        "imagepath": "images/aurum.png",
-        "links": [],
-        "classes": []	    
-      },
-	    {
-        "title": "Devil girl",
-        "description": "This was my first real attempt at drawing a humanoid figure on a pen display.",
-        "date": "",
-        "imagepath": "images/djofla.png",
         "links": [],
         "classes": []
       },
@@ -49,11 +41,20 @@
         "classes": []
       },
 	    {
-        "title": "Dragonhead",
-        "description": "This was a random sketch I drew on a pen display.",
+        "title": "Aurum Argentum",
+        "description": "A city in my world called Aurum Argentum, where most live a fairly prosperous life. Drawn on paper with pens and colored pencils.",
         "date": "",
-        "imagepath": "images/dragonhead.png",
+        "imagepath": "images/aurum.png",
         "links": [],
         "classes": []
+      },
+	    {
+        "title": "Devilgirl",
+        "description": "This was my first real attempt at drawing a humanoid figure on a pen display.",
+        "date": "",
+        "imagepath": "images/djofla.png",
+        "links": [],
+        "classes": []
+      }	    
     ]
 }
