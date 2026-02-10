@@ -1,6 +1,22 @@
 {
     "projects": [
-      {
+		{
+        "title": "Forest Drake",
+        "description": "A sculpt and texture I did for a school project.",
+        "date": "",
+        "imagepath": "forestdrakethumbnail.png",
+        "links": [],
+        "classes": []
+      },
+		{
+        "title": "A new species",
+        "description": "A concept I created some years back of some kind of animal or alien/fantasy creature.",
+        "date": "",
+        "imagepath": "images/aspecies.jpg",
+        "links": [],
+        "classes": []
+      },
+       {
         "title": "My world map",
         "description": "This is a world map I created for myself and my Dungeons & Dragons games. It was first hand-drawn on A3 paper and then scanned and worked on digitally. Every place has history and a story to tell, a lot of unique encounters and interesting things to see.",
         "date": "",
@@ -16,14 +32,7 @@
         "links": [],
         "classes": []
       },
-	    {
-        "title": "Dragonhead",
-        "description": "This was a random sketch I drew on a pen display.",
-        "date": "",
-        "imagepath": "images/dragonhead.png",
-        "links": [],
-        "classes": []
-      },
+	    
 	    {
         "title": "Baby dragon",
         "description": "A baby dragon I drew with pens on paper.",
@@ -64,14 +73,7 @@
         "links": [],
         "classes": []
       },
-	    {
-        "title": "A new species",
-        "description": "A concept I created some years back of some kind of animal or alien/fantasy creature.",
-        "date": "",
-        "imagepath": "images/aspecies.jpg",
-        "links": [],
-        "classes": []
-      },
+	    ,
 	    {
         "title": "Ink dragon",
         "description": "A dragon I drew originally as a tattoo idea.",
