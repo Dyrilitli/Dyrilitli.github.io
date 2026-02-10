@@ -8,6 +8,7 @@
         "links": [],
         "classes": []
       },
+		,
 		{
         "title": "Dino Baba",
         "description": "A concept I created for school. Baba yaga if the legs were a dinosaur."
@@ -16,7 +17,8 @@
         "links": [],
         "classes": []
       },
-       {
+		,
+        {
         "title": "My world map",
         "description": "This is a world map I created for myself and my Dungeons & Dragons games. It was first hand-drawn on A3 paper and then scanned and worked on digitally. Every place has history and a story to tell, a lot of unique encounters and interesting things to see.",
         "date": "",
@@ -24,7 +26,8 @@
         "links": [],
         "classes": []
       },
-	{
+		
+	    {
         "title": "Dragon",
         "description": "An elegant beast/dragon I drew on paper. One of three prime dieties in my world which can be seen above.",
         "date": "",
@@ -32,7 +35,7 @@
         "links": [],
         "classes": []
       },
-	    
+	    ,
 	    {
         "title": "Baby dragon",
         "description": "A baby dragon I drew with pens on paper.",
@@ -41,7 +44,7 @@
         "links": [],
         "classes": []
       },
-		
+		,
 	    {
         "title": "Aurum Argentum",
         "description": "A city in my world called Aurum Argentum, where most live a fairly prosperous life. Drawn on paper with pens and colored pencils.",
@@ -50,6 +53,7 @@
         "links": [],
         "classes": []
       },
+		,
 	    {
         "title": "Chibi style",
         "description": "An experiment with the chibi style and trying out some new fun ways to work in a digital medium.",
