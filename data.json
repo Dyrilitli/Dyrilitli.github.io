@@ -4,13 +4,14 @@
         "title": "Forest Drake",
         "description": "A sculpt and texture I did for a school project.",
         "date": "",
-        "imagepath": "forestdrakethumbnail.png",
+        "imagepath": "forestdrake02_thumbnail.png",
         "links": [],
         "classes": []
       },
 		{
         "title": "Dino Baba",
-        "description": "A concept I created for school. Baba yaga if the legs were a dinosaur": "",
+        "description": "A concept I created for school. Baba yaga if the legs were a dinosaur."
+		"date": "",
         "imagepath": "images/babascrnd.png",
         "links": [],
         "classes": []
